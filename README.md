@@ -4,3 +4,6 @@
 # NppExc
   > "C:\INT630\AltovaXML.exe" /oi /xq "$(FULL_CURRENT_PATH)
   > 
+
+  
+# AltovaXML Command line

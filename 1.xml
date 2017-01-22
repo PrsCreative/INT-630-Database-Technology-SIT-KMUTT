@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?target instruction?>
+<lecturer>
+  <name>Kriengkrai</name>
+  <course code="int604" credit="3">
+    <title>DBMS</title>
+    <core_course/>
+  </course>
+  <course code="int630" credit="3">
+    <title>DB Tech</title>
+    <!-- prerequisite for IT -->
+    <?checkPre "IT-Only"?>
+    <prerequisite code="int604"/>
+</course>
+<student>
+	<name lang="th">
+		ประวิทย์  สารพันธ์
+	</name>
+</student>
+</lecturer>
+<!-- end of document -->
