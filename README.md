@@ -38,14 +38,14 @@
 
   ## find num of project allther project, find title of project, fine review of proejct from XML
   
-  for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string() 
-  return <result number='{$count}'>{$node}</result>
+    for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string() 
+    return <result number='{$count}'>{$node}</result>
 
-  for $node at $count in doc("projects.xml")/projectList/project/title
-  return <result number='{$count}'>{$node}</result>
+    for $node at $count in doc("projects.xml")/projectList/project/title
+    return <result number='{$count}'>{$node}</result>
 
-  for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string()
-  return <result number='{$count}'>{$node}</result>
+    for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string()
+    return <result number='{$count}'>{$node}</result>
 
 
 
