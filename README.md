@@ -13,28 +13,22 @@
 
 ## Query From My projects.xml
 
-  doc("projects.xml")/*
-
-  doc("projects.xml")/child::projectList
-
-  doc("projects.xml")/child::node()
-
-  doc("projects.xml")/child::comment()
-
-  doc("projects.xml")/child::element()
-
-  doc("projects.xml")/child::element(projectList)
+    doc("projects.xml")/*
+    doc("projects.xml")/child::projectList
+    doc("projects.xml")/child::node()
+    doc("projects.xml")/child::comment()
+    doc("projects.xml")/child::element()
+    doc("projects.xml")/child::element(projectList)
   
 ## Comment
-(:              :)
+    (:              :)
 
 ## For let XQuery
-  
-  for $node in doc("projects.xml")/child::node()
-  return $node
+    for $node in doc("projects.xml")/child::node()
+    return $node
 
-  for $node at $count in doc("projects.xml")/child::node()
-  return <result number='{$count}'>{$node}</result>
+    for $node at $count in doc("projects.xml")/child::node()
+    return <result number='{$count}'>{$node}</result>
 
   ## find num of project allther project, find title of project, fine review of proejct from XML
   
