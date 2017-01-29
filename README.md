@@ -20,7 +20,7 @@
     doc("projects.xml")/child::element()
     doc("projects.xml")/child::element(projectList)
   
-## Comment
+## Comment XQuery
     (:              :)
 
 ## For let XQuery
@@ -33,16 +33,40 @@
   ## Find data in XML File
     
     ## find num of project allther project
-    for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string() 
+    ## แบบย่อ
+    for $node at $count in 
+    doc("projects.xml")/projectList/project/attribute::num/string() 
     return <result number='{$count}'>{$node}</result>
-    
+
+    ## แบบเต็ม
+    for $node at $count in 
+    doc("projects.xml")/child::projectList/child::project/attribute::num/string() 
+    return <result number='{$count}'>{$node}</result>
+    ------------------------------------------------------------------------------------------------------
+
     ## find title of project
-    for $node at $count in doc("projects.xml")/projectList/project/title
+    ## แบบย่อ
+    for $node at $count in 
+    doc("projects.xml")/projectList/project/title
     return <result number='{$count}'>{$node}</result>
+
+    ## แบบเต็ม
+    for $node at $count in 
+    doc("projects.xml")/child::projectList/child::project/title
+    return <result number='{$count}'>{$node}</result>
+    ------------------------------------------------------------------------------------------------------
     
     ## find review of proejct from XML
-    for $node at $count in doc("projects.xml")/projectList/project/attribute::num/string()
+    ## แบบย่อ
+    for $node at $count in 
+    doc("projects.xml")/projectList/project/attribute::num/string()
     return <result number='{$count}'>{$node}</result>
+
+    ## แบบเต็ม
+    for $node at $count in 
+    doc("projects.xml")/child::projectList/child::project/attribute::num/string()
+    return <result number='{$count}'>{$node}</result>
+    ------------------------------------------------------------------------------------------------------
 
 
 
