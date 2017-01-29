@@ -28,4 +28,14 @@
 ## Comment
 (:              :)
 
-##
+## For let
+  
+  for $node in doc("projects.xml")/child::node()
+  return $node
+
+  for $node at $count in doc("projects.xml")/child::node()
+  return <result number='{$count}'>{$node}</result>
+
+
+## Link
+https://www.w3.org/TR/xpath-functions-30/
