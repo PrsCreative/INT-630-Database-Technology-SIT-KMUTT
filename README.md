@@ -68,7 +68,5 @@
     return <result number='{$count}'>{$node}</result>
     ------------------------------------------------------------------------------------------------------
 
-
-
 ## Link
 https://www.w3.org/TR/xpath-functions-30/
