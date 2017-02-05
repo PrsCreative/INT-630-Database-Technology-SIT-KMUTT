@@ -68,5 +68,10 @@
     return <result number='{$count}'>{$node}</result>
     ------------------------------------------------------------------------------------------------------
 
+  ## Predicate
+  
+    # Union
+    for $node at $count in 
+    doc("projects.xml")/projectList/project[advisor[fn='Jack'] union advisor[ln='Bryan']]/title/text()return <result number='{$count}'>{$node}</result>
 ## Link
 https://www.w3.org/TR/xpath-functions-30/
